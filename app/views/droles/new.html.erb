@@ -3,6 +3,7 @@
 
 <%= form_with(model: @drole, local: true) do |form| %>
    <p>error</p>
+    <%= @drole.errors.any? %>
         <% if @drole.errors.any? %>
             <h2> Une erreur est survenue</h2>
             <ul>
