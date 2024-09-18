@@ -1,0 +1,21 @@
+<h2>Editer la blague</h2>
+
+
+<%= form_with model: @drole, local: true do |form| %>
+        <p>
+            <%= form.label :nom %><br>
+            <%= form.text_field :nom %>
+        </p>
+        <p>
+            <%= form.label :contenu%><br>
+            <%= form.text_area :contenu%>
+        </p>
+        <p>
+            <%= form.label :auteur %><br>
+            <%= form.text_field :auteur %>
+        </p>
+
+        <p>
+            <%= form.submit 'Modifier' %>
+        </p>
+<% end %>

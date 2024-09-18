@@ -1,0 +1,15 @@
+<h2>Liste de toutes les blagues</h2>
+<div><%= link_to"Publiez blague", new_drole_path() %> </div> 
+<div>
+    <% @drole.each do |drol| %>
+
+   <div>Nom: <%= drol.nom %> </div> 
+   <div>Contenu: <%= drol.contenu %> </div> 
+   <div>Auteur: <%= drol.auteur %> </div> 
+   <div><%= link_to"Voir blague", drole_path(drol) %> </div> 
+   <div><%= link_to"Modifier la blague", edit_drole_path(drol) %> </div> 
+   <hr> 
+
+  <% end %>
+
+</div>

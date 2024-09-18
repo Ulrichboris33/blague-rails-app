@@ -1,0 +1,30 @@
+<h2>Publiez une nouvelle blague</h2>
+
+
+<%= form_with(model: @drole, local: true) do |form| %>
+   <p>error</p>
+        <% if @drole.errors.any? %>
+            <h2> Une erreur est survenue</h2>
+            <ul>
+                    <% @drole.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                    <%end%>
+            </ul>
+        <%end%>
+        <p>
+            <%= form.label :nom %><br>
+            <%= form.text_field :nom %>
+        </p>
+        <p>
+            <%= form.label :contenu%><br>
+            <%= form.text_area :contenu%>
+        </p>
+        <p>
+            <%= form.label :auteur %><br>
+            <%= form.text_field :auteur %>
+        </p>
+
+        <p>
+            <%= form.submit 'Publier' %>
+        </p>
+<% end %>
